@@ -80,7 +80,7 @@
                 var ends   = moment();
 
                 var duration = moment.duration(ends.diff(starts));
-                var msg = "You have turned " + duration._data.years + " years, " + duration._data.months + " months, " + duration._data.days + " days old on &#x1F30F."
+                var msg = "You have turned " + duration._data.years + " years, " + duration._data.months + " months, " + duration._data.days + " days, " + duration._data.hours  + " hours " + "old on &#x1F30F."
 
                 element.innerHTML = msg;
                 //console.log(duration);
@@ -169,7 +169,7 @@
     <div class="row">
         <div class="message1">
             <center>
-                <h3 align="center">Please enter the Auth Key &#x1F511 to decrypt your message.</h3>
+                <h3 align="center">Please enter the Auth Key &#x1F511 to decrypt your B'day message.</h3>
                 <input align="center" type="text" id="authKeyInput">
                 <input align="center" type="button" value="Submit" onclick="authClick()">
                 <br>
