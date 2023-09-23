@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Shagun !</title>
+    <link rel="icon" type="image/x-icon" href="images/happy-birthday.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/balloons.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+    <!-- Crypto Js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <!-- Moment Js -->
+    <script src="js/moment.min.js"></script>
+
+    <script>
+
+        var imgIndex = 1;
+        const maxImages = 19;
+
+        function loadImage() {
+            console.log("loading image");
+            imgIndex += 1;
+            if (imgIndex > maxImages) {
+                imgIndex = 1;
+            }
+        
+            var imgPath = "images/" + imgIndex + ".jpeg";
+            const element = document.getElementById("photoMessage");
+            element.src = imgPath;
+
+        }
+
+        function authClick() {
+            const authHash = "308a3820e4cccbe043cb5228de5e71e3";
+            const authInput = document.getElementById("authKeyInput").value;
+            const authInputHash = CryptoJS.MD5(authInput).toString();
+
+            const element = document.getElementById("authOutput");
+            const message = document.getElementById("message");
+
+            if (authHash == authInputHash) {
+                console.log("Auth done");
+                element.innerHTML = "Decrypted message &#x1F4E9 !!!"
+                
+                message.style.textAlign = "center";
+                message.style.border = "dotted";
+                message.style.marginLeft = '50px';
+                message.style.marginRight = '50px';
+                message.style.marginTop = '10px';
+                
+                message.innerHTML = "Hello";   
+            }
+            else {
+                element.innerHTML = "Invalid Auth Key &#x1F511 !!!"
+                message.style.textAlign = "";
+                message.style.border = "";
+                message.style.marginLeft = '';
+                message.style.marginRight = '';
+                message.style.marginTop = '';
+                message.innerHTML = "";
+                
+                console.log("Auth failed");
+            }
+        }
+    </script>
+
+    <!-- Time Calculation script -->
+    <script>
+
+        function refreshTimeElapsed() {
+                const element = document.getElementById("dataCalculation");
+                var starts = moment('1999-09-24 00:00:00');
+                var ends   = moment();
+
+                var duration = moment.duration(ends.diff(starts));
+                var msg = "You have turned " + duration._data.years + " years, " + duration._data.months + " months, " + duration._data.days + " days old on &#x1F30F."
+
+                element.innerHTML = msg;
+                //console.log(duration);
+                mainDiv = document.getElementById("main");
+                console.log(mainDiv);
+
+        }
+        
+        $(document).ready(function()
+        {
+            setInterval(function()
+            {
+                refreshTimeElapsed();
+            }, 2000); // every 2 seconds
+        }
+    );
+    </script>
+
+</head>
+
+<style>
+    body, input {
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 400;
+    }
+
+    .mainHeading {
+        font-size: xx-large;
+    }
+
+    .authInputBox {
+        text-align: center;
+        padding-top: 20px;
+        font-family: 'Exo 2', sans-serif;
+        font-size: x-large;
+    }
+
+    .authKeyInput {
+    }
+
+    .message {
+        height: 500px;
+    }
+
+    .authOutput {
+        height: 100px;
+    }
+    .container {
+        padding-top: 30px;
+    }
+
+
+    .message1 {
+        float: left;
+        width: 45%;
+    }
+    .message2 {
+        float: left;
+        width: 45%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .row {
+        padding: 2%;
+    }
+
+</style>
+
+
+<body onload="refreshTimeElapsed()">
+
+
+    <div class="mainHeading">
+        <h1 align="center"> &#x1f382 🎉 &#x1F37A Happy Birthday Shagun ! &#x1f382 🎉 &#x1F37A </h1>
+        <h4 id="dataCalculation" align="center">
+            You have turned 25 years old !
+        </h4>
+    </div>
+    
+    <hr>
+ 
+    
+    <div class="row">
+        <div class="message1">
+            <center>
+                <h3 align="center">Please enter the Auth Key &#x1F511 to decrypt your message.</h3>
+                <input align="center" type="text" id="authKeyInput">
+                <input align="center" type="button" value="Submit" onclick="authClick()">
+                <br>
+                <h4 id="authOutput" align="center"></h4>
+                <br>
+                <div id="message"></div>
+            </center>
+        </div>
+
+        <center>
+            <h3 align="center">Click on the below button to witness craziness !</h3>
+            <input align="center" type="button" value="Next" onclick="loadImage()">
+            <br>
+            <h4 id="authOutput" align="center"></h4>
+            <br>
+            <img src="images/1.jpeg" id="photoMessage" alt="Paris" width="400" height="500" loading="lazy">
+        </center>
+    </div>
+        
+</body>
+
+<footer align="center">
+    <h3>Built with &#x2764 by Mayank</h3>
+</footer>
+
+</html>
