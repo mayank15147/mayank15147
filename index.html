@@ -36,26 +36,25 @@
         }
 
         function authClick() {
-            const authHash = "308a3820e4cccbe043cb5228de5e71e3";
+            
             const authInput = document.getElementById("authKeyInput").value;
-            const authInputHash = CryptoJS.MD5(authInput).toString();
-
+            const encryptedAESText = "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";
+            //const authInputHash = CryptoJS.AES.encrypt(encryptedAESText, key).toString();
             const element = document.getElementById("authOutput");
             const message = document.getElementById("message");
-
-            if (authHash == authInputHash) {
-                console.log("Auth done");
+            
+            try {
+                const authInputHash = CryptoJS.AES.decrypt(encryptedAESText, authInput).toString(CryptoJS.enc.Utf8);
                 element.innerHTML = "Decrypted message &#x1F4E9 !!!"
-                
                 message.style.textAlign = "center";
                 message.style.border = "dotted";
                 message.style.marginLeft = '50px';
                 message.style.marginRight = '50px';
                 message.style.marginTop = '10px';
                 
-                message.innerHTML = "Hello";   
-            }
-            else {
+                message.innerHTML = authInputHash
+
+            }catch(err) {
                 element.innerHTML = "Invalid Auth Key &#x1F511 !!!"
                 message.style.textAlign = "";
                 message.style.border = "";
@@ -63,9 +62,12 @@
                 message.style.marginRight = '';
                 message.style.marginTop = '';
                 message.innerHTML = "";
-                
-                console.log("Auth failed");
             }
+            
+
+            
+                
+            
         }
     </script>
 
@@ -82,9 +84,6 @@
 
                 element.innerHTML = msg;
                 //console.log(duration);
-                mainDiv = document.getElementById("main");
-                console.log(mainDiv);
-
         }
         
         $(document).ready(function()
@@ -184,7 +183,7 @@
             <h3 align="center">Click on the below button to witness craziness !</h3>
             <input align="center" type="button" value="Next" onclick="loadImage()">
             <br>
-            <h4 id="authOutput" align="center"></h4>
+            <h4 id="authOutput" align="left"></h4>
             <br>
             <img src="images/1.jpeg" id="photoMessage" alt="Paris" width="400" height="500" loading="lazy">
         </center>
