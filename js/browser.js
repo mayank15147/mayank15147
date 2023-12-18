@@ -12,21 +12,18 @@ function getBrowserName() {
      * Firefox, Opera, Edge, Chrome
      */
     console.log(browserName)
-    if (browserName != "Chrome" && browserName == '') {
+    /* Not Safari */
+    if (browserName != '' && browserName != "Chrome") {
         alert("Please download chrome browser.");
         window.stop()
     }
     console.log("Check for safari")
-    
     if(browserName == '') {
         var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
         if( isSafari != true ) {
             alert("Browser detection failed.");
         }
     }
-
-
-    if( bro )
 
     return browserName;
 }
