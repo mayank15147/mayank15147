@@ -31,6 +31,14 @@ body::-webkit-scrollbar {
     border-radius: 50%;
 }
 
+.img-crop2 {
+    width: 14rem;
+    height: 14rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
 .img-crop>img {
     display: inline;
     margin: 0 auto;
