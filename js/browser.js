@@ -12,6 +12,7 @@ function getBrowserName() {
      * Firefox, Opera, Edge, Chrome
      */
     console.log(browserName)
+    alert(browserName.toString());
     /* Not Safari */
     if (browserName != '' && browserName != "Chrome") {
         alert("Please download chrome browser.");
