@@ -15,12 +15,12 @@ body::-webkit-scrollbar {
 
 .font-esthetic {
     font-family: 'Sacramento', cursive !important;
-    color: #ffffff !important;
+    color: #111111 !important;
 }
 
 .font-arabic {
     font-family: 'Noto Naskh Arabic', serif !important;
-    color: #ffffff !important;
+    color: #111111 !important;
 }
 
 .img-crop {
@@ -61,7 +61,7 @@ body::-webkit-scrollbar {
 .mouse-animation {
     padding: 0.25rem 0.625rem;
     height: 2rem;
-    border: 0.1rem solid #ffffff;
+    border: 0.1rem solid #111111;
     border-radius: 1.4rem;
     opacity: 0.75;
     box-sizing: content-box;
@@ -87,7 +87,7 @@ body::-webkit-scrollbar {
     width: 0.25rem;
     height: 0.625rem;
     border-radius: 25%;
-    background-color: #ffffff;
+    background-color: #111111;
     animation-name: scroll;
     animation-duration: 2.5s;
     animation-timing-function: linear;
@@ -95,7 +95,7 @@ body::-webkit-scrollbar {
 }
 
 .dark-section {
-    background-color: #111111 !important;
+    background-color: #FFF0DB !important;
     margin-top: -0.5rem;
     margin-bottom: -0.5rem;
 }
