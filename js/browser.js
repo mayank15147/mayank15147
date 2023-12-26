@@ -54,8 +54,8 @@ function parseVersion()
     console.log("Card Type: ", cardType)
     
     if( version == "harshita") {
-        document.getElementById("wedding_main_heading").innerHTML = "Shri. Suresh Chand & Smt. Maya Pal"
-        document.getElementById("engagement_main_heading").innerHTML = "Shri. Suresh Chand & Smt. Maya Pal"
+        document.getElementById("wedding_main_heading").innerHTML = "Shri. Suresh Chand Pal & Smt. Maya Pal"
+        document.getElementById("engagement_main_heading").innerHTML = "Shri. Suresh Chand Pal & Smt. Maya Pal"
         document.getElementById("wedding_message").innerHTML = "Request your gracious presence at the wedding ceremony of their beloved daughter."
         document.getElementById("engagement_message").innerHTML = "Request your gracious presence at the engagement ceremony of their beloved daughter."
         
