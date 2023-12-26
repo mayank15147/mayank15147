@@ -140,6 +140,7 @@ function parseVersion()
     if( cardType != 'default' ) {
         document.getElementById("home_main_title").innerHTML = "Engagement Invitation"
         document.getElementById("home_main_date").innerHTML = "19 January 2024"
+        document.getElementById("landing_main_title").innerHTML = "The Engagement of"
         document.getElementById("tanggal").style = "display:none;";
         document.getElementById("post_wedding_wave_svg").style.display = "none";
         document.getElementById("messages_section").className = "light-section"
@@ -160,6 +161,7 @@ function parseVersion()
 
     } else {
         document.getElementById("home_main_title").innerHTML = "Wedding Invitation"
+        document.getElementById("landing_main_title").innerHTML = "The Wedding of"
         document.getElementById("home_main_date").innerHTML = "29 January 2024"
         document.getElementById("post_timer_wave_svg").style.fill = 'white'
     }
