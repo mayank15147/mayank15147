@@ -83,13 +83,13 @@ function parseVersion()
         document.getElementById("wedding_photo_name_left").innerHTML = "Harshita"
         document.getElementById("wedding_photo_name_right").innerHTML = "Nitin"
 
-        document.getElementById("message_img1_src").src = "assets/images/lakshay.jpeg"
+        document.getElementById("message_img1_src").src = "assets/images/lakshay_pravi.jpeg"
         document.getElementById("message_img2_src").src = "assets/images/khawish.jpg"
-        document.getElementById("message_img3_src").src = "assets/images/pravi.jpeg"
+        document.getElementById("message_img3_src").src = "assets/images/mayank.jpeg"
 
-        document.getElementById("message_img1_name").innerHTML = "Lakshay"
+        document.getElementById("message_img1_name").innerHTML = "Lakshay & Pravi"
         document.getElementById("message_img2_name").innerHTML = "Khwaish"
-        document.getElementById("message_img3_name").innerHTML = "Paravi"
+        document.getElementById("message_img3_name").innerHTML = "Mayank"
         document.getElementById("welcome_page_name").innerHTML = "Harshita & Nitin"
         document.getElementById("landing_page_name").innerHTML = "Harshita & Nitin"
         
